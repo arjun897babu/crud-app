@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+
+  <title>Bootstrap Login Form</title>
+</head>
+
+<body>
+
+  <div class="bg-success pd-3 min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-10 col-sm-7 col-md-6 col-lg-4 m-auto">
+      <div class="card border shadow-lg">
+        <div class="card-body">
+          <div class="d-flex justify-content-center align-items-center flex-column">
+
+            <svg class="mx-auto my-3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+              class="bi   bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg>
+            <h4>USER LOGIN</h4>
+
+          </div>
+
+          <form action="/api/login" method="post">
+            <label for="" class="fw-lighter">EMAIL ID</label>
+            <input type="email" name="email" id="" class="form-control my-2" required pattern="/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/">
+            <label for="" class="fw-lighter">PASSWORD</label>
+            <input type="password" name="password" id="" class="form-control my-2"  required minlength="5">
+            <div class="fw-bolder text-danger d-flex justify-content-center">
+              <%if (user) { %>
+                <p>INVALID ENTRY</p>
+              <% } %>
+            </div>
+
+            <div class="text-center mt-3">
+
+              <input type="submit" class="btn btn-success">
+
+            </div>
+           <div class="d-flex justify-content-end">
+            <h5 class="text-light"><a style="text-decoration: none;" href="/register-user">Register account</a></h5>
+           </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"></script>
+
+    
+</body>
+
+</html>

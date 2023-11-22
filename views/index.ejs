@@ -1,0 +1,53 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+   <!-- main -->
+   <main id="site-main">
+    <div class="container">
+      <div class="box-nav d-flex justify-content-around">
+        <a href="/add-user" class="border-shadow align-items-center text-center d-flex justify-content-center">
+          <span class=" text-gradient">New User <i class="bi bi-people-fill"></i> <i class="fas fa-user"></i></span>
+        </a>
+        <form action="/logout" method="post">
+          <button type="submit" class="btn btn-outline-success "><span class="text-black">LOG OUT</span></button>
+        </form>
+      </div><br>
+      <input class="form-control" id="myInput" type="text" placeholder="Search.." style="box-shadow: none;
+      outline: none;">
+
+      <!-- form handling -->
+      <form action="/" method="POST">
+        <div class="table-responsive">
+          <table class="table table-striped" >
+            <thead class="thead-dark">
+              <tr>
+                <th>NO</th>
+                <th>Name</th>
+                <th>@Email</th>
+                <th>Gender</th>
+                <th>Status</th>
+                
+              </tr>
+            </thead>
+            <tbody class="table-group-divider" id="myTable">
+                
+                <%- include('include/_show') %>
+
+            </tbody>
+          </table>
+        </div>
+
+      </form>
+      <!-- form handling -->
+     
+    </div>
+  </main>
+  <!-- main -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

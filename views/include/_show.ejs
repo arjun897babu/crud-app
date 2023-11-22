@@ -1,0 +1,19 @@
+
+<%for(let x in users){%>
+<tr>
+  
+  <td><%=parseInt(x)+1%></td>
+  <td><%=users[x].name%></td>
+  <td><%=users[x].email%></td>
+  <td><%=users[x].gender%></td>
+ 
+  <td>
+    <a href="/update-user?id=<%=users[x]._id%>" class="">
+      <span> <i class="bi bi-pencil-square"></i> </span>
+    </a>
+    <a href="" class="delete" data-id = <%=users[x]._id%>>
+      <span><i class="bi bi-trash"></i></span>
+    </a>
+  </td>
+</tr>
+<%}%>

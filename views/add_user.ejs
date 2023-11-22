@@ -1,0 +1,32 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- main -->
+  <main id="site-main">
+    
+    <div class="filter  m-2 m-md-5">
+      <a href="/"><i class="bi bi-arrow-return-left"></i> All User</a>
+    </div>
+  <div class="container col-sm ">
+      <div class="form-title text-center">
+        <h2 class="text-dark">New User</h2>
+      </div>
+    </div><br> 
+    <div class="fw-bolder text-danger d-flex justify-content-center">
+      <%if (isValid) { %>
+        <p>
+          The email is already used
+        </p>
+      <% } %>
+    </div>
+    <%- include('include/_form') %>
+    
+  </div>
+</main>
+<!-- main -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

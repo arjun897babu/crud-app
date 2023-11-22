@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="/css/style_home.css">
+</head>
+<body class="min-vh-100 img-thumbnail" >
+  <nav class="d-flex justify-content-center align-items-center">
+    <a href="#home" class="text-center">Home</a>
+    <a href="#home" class="text-center">About</a>
+    <a href="#home" class="text-center">Contact</a>
+    <a href="#home" class="text-center">Help</a>
+   
+  </nav>
+  
+  <main class="d-flex justify-content-center align-items-center flex-column">
+    <h1>WELCOME</h1>
+   <div>
+    
+      <h2 class="text-uppercase "> Hello, <%= userName %> ! This is your home page</h2>
+
+   </div>
+      
+      
+    <form action="/user-logout" method="post">
+      <button type="submit" class="btn btn-outline-light"><span class="text-black">LOG OUT</span></button>
+    </form>  
+  </main>
+  
+</body>
+</html>

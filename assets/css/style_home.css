@@ -1,0 +1,42 @@
+body {
+ 
+  margin: 0;
+  font-family:fantasy;
+  background-image: url(https://e0.pxfuel.com/wallpapers/272/499/desktop-wallpaper-motion-dark-green-triangles-shapes-abstract-geometric-background-elegant-and-luxury-dynamic-style-for-business-and-corporate-template-motion-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  height: 80px;
+  background-color:#E0DED9;
+ 
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black; 
+  transition: background 0.6s ;
+}
+
+nav a:hover{
+  background:#3D7A5B;
+  color: white;
+}
+
+
+main{
+  height: 50vh;
+}
+
+h1, h2{
+  margin:  0;
+}
+
+h1 {
+  font-size: 3em;
+}
+

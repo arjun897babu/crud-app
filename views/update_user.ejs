@@ -1,0 +1,65 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- main -->
+  <main id="site-main">
+    
+    <div class="filter  m-2 m-md-5">
+      <a href="/"><i class="bi bi-arrow-return-left"></i> All User</a>
+    </div>
+  <div class="container col-sm ">
+      <div class="form-title text-center">
+        <h2 class="text-dark text-uppercase">update User</h2>
+        <span class="text-secondary text-capitalize">update user details</details></span>
+      </div>
+    </div><br> 
+ 
+    <!-- form  -->
+ <div class="container">
+  <div class="container-fluid justify-content-center">
+    <form method="POST" id="update_user" class="new_user" >
+      <!-- name and email field (on the same row) -->
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label for="name" class="text-dark">Name</label>
+          <input type="hidden" name="id" value="<%=user._id%>">
+          <input type="text" name="name" value="<%=user.name%>" placeholder="Mark Stoenis" class="w-100"  pattern="^[A-Za-z]+( [A-Za-z]+)?$"required minlength="3">
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label for="Email" class="text-dark">Email</label>
+          <input type="text" name="email" value="<%=user.email%>" placeholder="example@gmail.com" class="w-100"  pattern="/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/" required>
+        </div>
+      </div>
+      <!-- gender and status field (on the same row) -->
+      <div class="row">
+        <div class="d-flex col-12 mb-3">
+          <label for="gender" class="text-danger me-4 "><i class="bi bi-gender-ambiguous"></i>Gender</label>
+          <div class="form-check ">
+            <input type="radio" class="form-check-input" id="radio-2" name="gender" value="Male" required <%= user.gender=='Male'?'checked':'' %> >
+            <label for="radio-2" class="me-4 form-check-label " ><i class="bi bi-gender-male"></i>Male</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="radio-3" name="gender" value="Female" required <%= user.gender=='Female'?'checked':'' %> class="form-check-input">
+            <label for="radio-3" class="form-check-label"><i class="bi bi-gender-female"></i>Female</label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- form submit -->
+      <div class="form-group d-flex justify-content-center">
+        <button type="submit" class="w-75 btn btn-success">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- form handling -->
+  </div>
+</main>
+<!-- main -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

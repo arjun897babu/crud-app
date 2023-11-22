@@ -1,0 +1,47 @@
+ <!-- form  -->
+ <div class="container">
+  <div class="container-fluid justify-content-center">
+    <form action="/api/users" method="POST" id="add_user" class="new_user">
+      <!-- name and email field (on the same row) -->
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label for="name" class="text-dark">Name</label>
+          <input type="hidden" name="id" value="">
+          <input type="text" name="name" value=""  class="form-control w-100" pattern = "^[A-Za-z]+( [A-Za-z]+)?$" required minlength="3">
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label for="Email" class="text-dark">Email</label>
+          <input type="email" name="email" value="" class="form-control w-100" pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$" required>
+        </div>
+        <div class="col-md-12 mb-3">
+          <label for="password" class="text-dark">Password</label>
+          <input type="text" name="password" value="" class="form-control"  class="w-100" minlength="5" required>
+        </div>
+      </div>
+      <!-- gender and status field (on the same row) -->
+      <div class="row">
+        <div class="d-flex col-12 mb-3">
+          <label for="gender" class="text-danger me-4 "><i class="bi bi-gender-ambiguous"></i>Gender</label>
+          <div class="form-check ">
+            <input type="radio" class="form-check-input" id="radio-2" name="gender" value="Male" required>
+            <label for="radio-2" class="me-4 form-check-label ">Male</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="radio-3" name="gender" value="Female" class="form-check-input" required>
+            <label for="radio-3" class="form-check-label">Female</label>
+          </div>
+        </div>
+        
+
+
+       
+      </div>
+      <!-- form submit -->
+      <div class="form-group d-flex justify-content-center">
+        <button type="submit" class="w-75 btn btn-success">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- form handling -->
